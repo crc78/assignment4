@@ -103,3 +103,17 @@ input:-moz-placeholder {
   font-size: 26px;
   text-align: center;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+a:hover {
+  color: red;
+  cursor: pointer;
+}

@@ -27,7 +27,7 @@ $(".flexsearch-input").keyup(function(){
 		theInput = $(".flexsearch-input").val().toLowerCase();
 
 		values.forEach(function(value){
-			if(value.toLowerCase().match(theInput)){
+			if(beginsWith(theInput, value.toLowerCase())){
 				list.push(value);
 			}
 		});
@@ -35,12 +35,16 @@ $(".flexsearch-input").keyup(function(){
 		$(".results").html(function(){
 			let formattedList = "";
 			list.forEach(function(item){
-				formattedList = formattedList + item + "<br>";
+				formattedList = formattedList + "<a target='_blank' href='https://www.google.com/#q=" + item + "'>"+ item + "</a><br>";
 			});
 			return formattedList;
 		});
 	}
 });
+
+function beginsWith(needle, haystack){
+	return (haystack.substr(0, needle.length) == needle);
+}
 
 (function() {
   // Magic!
