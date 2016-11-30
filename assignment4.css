@@ -96,3 +96,10 @@ input:-moz-placeholder {
   line-height: 45px;
   text-align: center;
 }
+
+.results {
+  margin-top: 25px;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 26px;
+  text-align: center;
+}
